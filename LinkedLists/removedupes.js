@@ -13,7 +13,7 @@ function removeDupes(root) {
     let curr = root;
     let next = curr.next;
     let prev = curr;
-    
+
 
     while (curr != null) {
         while (next != null) {
@@ -21,35 +21,34 @@ function removeDupes(root) {
                 prev.next = next.next;
             else
                 prev = next;
-            
+
             next = next.next;
 
         }
         curr = curr.next;
         prev = curr;
-        
+
     }
     return root;
 }
 
-function printlist(list){
+function printlist(list) {
 
     //console.log('Printing!!')
     let curr = list;
-    let arr =[];
+    let arr = [];
 
-    if(list==null)
+    if (list == null)
         return "";
-        
-    if(curr.next == null)
-    {
-        
+
+    if (curr.next == null) {
+
         console.log(curr.data);
         return;
     }
-    while(curr != null){
+    while (curr != null) {
         arr.push(curr.data);
-        curr=curr.next;
+        curr = curr.next;
     }
     console.log(arr.join('->'))
 
