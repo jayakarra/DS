@@ -104,5 +104,6 @@ n4 = new Node(5, n3);
 n5 = new Node(3, n4);
 
 //3->5->7->3->2->1
-printlist(arrange(n5,5)); 
+printlist(arrange(n5,5));  //3->3->2->1->5->7
+
 
